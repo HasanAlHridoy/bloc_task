@@ -5,9 +5,14 @@ import 'package:flutter_tasks_app/widgets/tasks_list.dart';
 
 import '../blocs/bloc_exports.dart';
 
-class TasksScreen extends StatelessWidget {
+class TasksScreen extends StatefulWidget {
   TasksScreen({Key? key}) : super(key: key);
 
+  @override
+  State<TasksScreen> createState() => _TasksScreenState();
+}
+
+class _TasksScreenState extends State<TasksScreen> {
   void _addTask(BuildContext context) {
     showModalBottomSheet(
       context: context,
